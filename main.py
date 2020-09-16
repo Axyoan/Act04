@@ -60,9 +60,26 @@ def func2():
     elif (month == 10 and day >= 23) or (month == 11 and day <= 21):
         print("Escorpio")
     elif (month == 11 and day >= 22) or (month == 12 and day <= 21):
-        print("Sagitario    ")
+        print("Sagitario")
     elif (month == 12 and day >= 22) or (month == 1 and day <= 19):
         print("Capricornio")
+
+
+def fact(i: int) -> int:
+    sol = 1
+    for j in range(1, i+1):
+        sol *= j
+    return sol
+
+
+def func3():
+    n = -1
+    while n <= 0:
+        n = int(input("Ingrese entero positivo n: "))
+    e = 0.0
+    for i in range(n+1):
+        e += float(1) / float(fact(i))
+    print("Valor de e con n dada: ", e)
 
 
 def main():
@@ -77,6 +94,8 @@ def main():
             func1()
         elif op == "2":
             func2()
+        elif op == "3":
+            func3()
 
 
 main()
